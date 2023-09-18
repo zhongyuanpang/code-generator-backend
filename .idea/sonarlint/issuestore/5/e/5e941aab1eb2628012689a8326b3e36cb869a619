@@ -1,0 +1,8 @@
+
+k	java:S116	"VRename this field "COLUMN_NAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ô÷«ì
+n	java:S116"YRename this field "COLUMN_COMMENT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×â¤˜
+n	java:S116"TRename this field "DATA_TYPE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓéÛŽýÿÿÿÿ
+}	java:S116"cRename this field "CHARACTER_MAXIMUM_LENGTH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Îä”Ïüÿÿÿÿ
+k	java:S116"VRename this field "IS_NULLABLE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓõÝÂ
+s	java:S116"YRename this field "COLUMN_DEFAULT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çø­ þÿÿÿÿ
+j	java:S116"URename this field "COLUMN_KEY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õÑ÷ä

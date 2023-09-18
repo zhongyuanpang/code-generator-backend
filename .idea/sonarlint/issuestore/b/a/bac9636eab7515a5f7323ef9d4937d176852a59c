@@ -1,0 +1,23 @@
+
+g	java:S112O"FDefine and throw a dedicated exception instead of using a generic one.(°Îâ·ûÿÿÿÿ8×¡ßš1
+g	java:S112i"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8Ù¡ßš1
+h	java:S112Š"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8Û¡ßš1
+m	java:S117x"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€³ûÁ8Ü¡ßš1
+Q
+java:S1874&"/Remove this use of "isEmpty"; it is deprecated.(ª™À¸üÿÿÿÿ8ñ¡ßš1
+E
+java:S1185."(Remove this method to simply inherit it.(ŒËÉ8ñ¡ßš1
+E
+java:S11854"(Remove this method to simply inherit it.(Š¿ß¡8ò¡ßš1
+j
+java:S5361U"HReplace this call to "replaceAll()" by a call to the "replace()" method.(Ü´¥¯ùÿÿÿÿ8ó¡ßš1
+e
+java:S5361T"HReplace this call to "replaceAll()" by a call to the "replace()" method.(šÛÆ¨8ô¡ßš1
+j
+java:S5361S"HReplace this call to "replaceAll()" by a call to the "replace()" method.(ˆ‹Ÿ´ÿÿÿÿÿ8ô¡ßš1
+Q
+java:S1905x"4Remove this unnecessary cast to "SqlSessionFactory".(€³ûÁ8ú¡ßš1
+N
+java:S3011|",This accessibility update should be removed.(š—§¢ûÿÿÿÿ8ú¡ßš1
+I
+java:S3011~",This accessibility bypass should be removed.(”òı8ú¡ßš1
