@@ -30,5 +30,11 @@
             and
             TABLE_NAME = #{tableName};
     </select>
+
+    <select id="getTableCount" resultType="java.lang.Integer" parameterType="java.lang.String">
+        SELECT count(TABLE_NAME)
+        FROM information_schema.TABLES
+        WHERE TABLE_SCHEMA = #{dataName};
+    </select>
 </mapper>
 

@@ -23,4 +23,11 @@ public interface CommonMapper {
      * @Date 2023/8/4 10:10
      **/
     List<Map<String, Object>> getTableColumnInfo(Map<String, Object> map);
+
+    /**
+     * @Description 根据数据库名查询表数量
+     * @Author pzy
+     * @Date 2023/9/20 11:40
+     **/
+    Integer getTableCount(@Param("dataName") String dataName);
 }

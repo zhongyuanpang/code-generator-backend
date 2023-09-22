@@ -62,5 +62,15 @@ public class DynamicDataSourceController {
         return new Result(ResultCode.SUCCESS, tableColumnInfo);
     }
 
+    /**
+     * @Description 根据数据库名查询表数量
+     * @Author pzy
+     * @Date 2023/9/20 11:40
+     **/
+    @GetMapping("/getTableCount")
+    public Result getTableCount(@RequestParam("dataName") String dataName){
+        Integer count = commonMapper.getTableCount(dataName);
+        return new Result(ResultCode.SUCCESS, count);
+    }
 
 }

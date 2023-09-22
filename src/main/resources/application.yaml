@@ -20,7 +20,7 @@ spring:
       test-while-idle: false
       validation-query: select 1
 
-    # swagger3.0配置（不添加会报错）
+  # swagger3.0配置（不添加会报错）
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
