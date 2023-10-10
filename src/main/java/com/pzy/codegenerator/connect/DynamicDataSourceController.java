@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
 
+import static org.springframework.util.ObjectUtils.isEmpty;
+
 @RestController
 @RequestMapping("datasource")
 @CrossOrigin
@@ -46,8 +48,8 @@ public class DynamicDataSourceController {
      * @Date 2023/8/3 20:08
      **/
     @GetMapping("/getAllTable")
-    public Result getAllTable(@RequestParam("query") String query) {
-        List<Map<String, Object>> allTable = commonMapper.getAllTable(query);
+    public Result getAllTable(@RequestParam("dataBase") String dataBase) {
+        List<Map<String, Object>> allTable = commonMapper.getAllTable(dataBase);
         return new Result(ResultCode.SUCCESS, allTable);
     }
 
@@ -68,8 +70,8 @@ public class DynamicDataSourceController {
      * @Date 2023/9/20 11:40
      **/
     @GetMapping("/getTableCount")
-    public Result getTableCount(@RequestParam("dataName") String dataName){
-        Integer count = commonMapper.getTableCount(dataName);
+    public Result getTableCount(@RequestParam("dataBase") String dataBase){
+        Integer count = commonMapper.getTableCount(dataBase);
         return new Result(ResultCode.SUCCESS, count);
     }
 

@@ -82,14 +82,14 @@ public class DynamicDataSource extends AbstractRoutingDataSource {
         // url  替换其中的占位符
         String url = dataConfig.get("url").replaceAll("\\{IP}", dataSourceVo.getUrl())
                 .replaceAll("\\{port}", dataSourceVo.getPort())
-                .replaceAll("\\{database}", dataSourceVo.getDataName());
+                .replaceAll("\\{database}", dataSourceVo.getDataBase());
         // 测试连接
         testConnection(driveName, url, dataSourceVo.getUsername(), dataSourceVo.getPassword());
 
         // 通过Druid数据库连接池连接数据库
         DruidDataSource dataSource = new DruidDataSource();
         //接收前端传递的参数并且注入进去
-        dataSource.setName(dataSourceVo.getDataName());
+        dataSource.setName(dataSourceVo.getDataBase());
         dataSource.setUrl(url);
         dataSource.setUsername(dataSourceVo.getUsername());
         dataSource.setPassword(dataSourceVo.getPassword());

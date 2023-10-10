@@ -15,7 +15,7 @@ public interface CommonMapper {
      * @Author pzy
      * @Date 2023/8/4 10:10
      **/
-    List<Map<String, Object>> getAllTable(@Param("query") String query);
+    List<Map<String, Object>> getAllTable(@Param("dataBase") String dataBase);
 
     /**
      * @Description 根据表名获取列信息
@@ -29,5 +29,5 @@ public interface CommonMapper {
      * @Author pzy
      * @Date 2023/9/20 11:40
      **/
-    Integer getTableCount(@Param("dataName") String dataName);
+    Integer getTableCount(@Param("dataBase") String dataBase);
 }

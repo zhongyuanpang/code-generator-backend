@@ -3,15 +3,7 @@
 <mapper namespace="com.pzy.codegenerator.connect.mapper.CommonMapper">
 
     <select id="getAllTable" resultType="map">
-        SELECT TABLE_NAME, TABLE_COMMENT FROM `information_schema`.`tables`
-        <trim prefix="where" prefixOverrides="and | or">
-            <if test="query != null and query != ''">
-                (
-                TABLE_NAME like concat('%',#{query},'%')
-                or TABLE_COMMENT like concat('%',#{query},'%')
-                )
-            </if>
-        </trim>
+        SELECT TABLE_NAME, TABLE_COMMENT FROM `information_schema`.`tables` WHERE TABLE_SCHEMA = #{dataBase} ORDER BY TABLE_NAME;
     </select>
 
     <select id="getTableColumnInfo" resultType="map">
@@ -26,7 +18,7 @@
         FROM
             INFORMATION_SCHEMA.COLUMNS
         WHERE
-            TABLE_SCHEMA = #{dataName}
+            TABLE_SCHEMA = #{dataBase}
             and
             TABLE_NAME = #{tableName};
     </select>
@@ -34,7 +26,7 @@
     <select id="getTableCount" resultType="java.lang.Integer" parameterType="java.lang.String">
         SELECT count(TABLE_NAME)
         FROM information_schema.TABLES
-        WHERE TABLE_SCHEMA = #{dataName};
+        WHERE TABLE_SCHEMA = #{dataBase};
     </select>
 </mapper>
 
