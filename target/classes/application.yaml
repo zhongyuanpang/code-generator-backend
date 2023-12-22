@@ -2,44 +2,40 @@ server:
   port: 3577
 
 # swagger 3.0配置
-config:
-  swagger3:
-    flag: true
+#config:
+#  swagger3:
+#    flag: true
+#  # swagger3.0配置（不添加会报错）
+#  mvc:
+#    pathmatch:
+#      matching-strategy: ant_path_matcher
 
-spring:
-  aop:
-    proxy-target-class: true  #true为使用CGLIB代理,AOP动态代理
-  datasource:
-    driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306?test
-    username: root
-    password: root
-    dataType: mysql  # 可选值 mysql oracle sqlserver postgresql
-    type: com.alibaba.druid.pool.DruidDataSource
-    druid:
-      test-while-idle: false
-      validation-query: select 1
 
-  # swagger3.0配置（不添加会报错）
-  mvc:
-    pathmatch:
-      matching-strategy: ant_path_matcher
-
-# 数据库类型配置
-datatype:
-  MySQL:
-    driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://{IP}:{port}/{database}
-  clickhouse:
-    driverClassName: ru.yandex.clickhouse.ClickHouseDriver
-    url: jdbc:clickhouse://{IP}:{port}/{database}
-  SQL Server:
-    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
-    url: jdbc:sqlserver://{IP}:{port};DatabaseName={database}
-  Postgre SQL:
-    driverClassName: org.postgresql.Driver
-    url: jdbc:postgresql://{IP}:{port}/{database}
-
-# mybatis
-mybatis-flex:
-  mapper-locations: classpath*:com/pzy/codegenerator/**/xml/*Mapper.xml,classpath*:com/pzy/codegenerator/**/**/xml/*Mapper.xml,classpath*:com/pzy/codegenerator/**/**/**/xml/*Mapper.xml
+#
+#
+#    <select id="getAllTable" resultType="map">
+#    SELECT TABLE_NAME, TABLE_COMMENT FROM `information_schema`.`tables` WHERE TABLE_SCHEMA = #{dataBase} ORDER BY TABLE_NAME;
+#    </select>
+#
+#    <select id="getTableColumnInfo" resultType="map">
+#    select
+#    COLUMN_NAME,
+#    COLUMN_COMMENT,
+#    DATA_TYPE,
+#    CHARACTER_MAXIMUM_LENGTH,
+#    IS_NULLABLE,
+#    COLUMN_DEFAULT,
+#    COLUMN_KEY
+#    FROM
+#    INFORMATION_SCHEMA.COLUMNS
+#    WHERE
+#    TABLE_SCHEMA = #{dataBase}
+#    and
+#    TABLE_NAME = #{tableName};
+#    </select>
+#
+#    <select id="getTableCount" resultType="java.lang.Integer" parameterType="java.lang.String">
+#    SELECT count(TABLE_NAME)
+#    FROM information_schema.TABLES
+#    WHERE TABLE_SCHEMA = #{dataBase};
+#    </select>
