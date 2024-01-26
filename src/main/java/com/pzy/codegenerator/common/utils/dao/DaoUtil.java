@@ -34,7 +34,7 @@ public class DaoUtil {
                 String rawType = resultSet.getString("Type");
                 String[] array = rawType.split("[()]");
 
-                map.put("Type", array[0]);
+                map.put("Type", rawType);
 
                 String length = "";
                 try {
@@ -162,8 +162,6 @@ public class DaoUtil {
 
     // TODO java 9 可以进一步优化流的关闭，不再需要使用传统方式关闭流
     public static Result connect(DaoAccessParam daoAccessParam, SqlHandler sqlHandler) throws Exception {
-
-
         String url = DaoUtil.processType(daoAccessParam);
 
         Connection connection = DriverManager.getConnection(url, daoAccessParam.getUsername(), daoAccessParam.getPassword());
