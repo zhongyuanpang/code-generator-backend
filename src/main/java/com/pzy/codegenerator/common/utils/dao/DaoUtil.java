@@ -29,25 +29,25 @@ public class DaoUtil {
             while (resultSet.next()) {
                 Map<String, Object> map = new LinkedHashMap();
 
-                map.put("Field", resultSet.getString("Field"));
+                map.put("COLUMN_NAME", resultSet.getString("Field"));
 
                 String rawType = resultSet.getString("Type");
                 String[] array = rawType.split("[()]");
 
-                map.put("Type", rawType);
+                map.put("DATA_TYPE", array[0]);
 
                 String length = "";
                 try {
                     length = array[1];
                 } catch (Exception e) {
                 }
-                map.put("Length", length);
+                map.put("CHARACTER_MAXIMUM_LENGTH", length);
 
-                map.put("Null", resultSet.getString("Null"));
-                map.put("Key", resultSet.getString("Key"));
-                map.put("Default", resultSet.getString("Default"));
+                map.put("IS_NULLABLE", resultSet.getString("Null"));
+                map.put("COLUMN_KEY", resultSet.getString("Key"));
+                map.put("COLUMN_DEFAULT", resultSet.getString("Default"));
                 map.put("Extra", resultSet.getString("Extra"));
-                map.put("Comment", resultSet.getString("Comment"));
+                map.put("COLUMN_COMMENT", resultSet.getString("Comment"));
                 list.add(map);
             }
             log.info("RESULT: {}", list);
